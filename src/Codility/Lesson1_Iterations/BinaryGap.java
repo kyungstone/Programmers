@@ -1,11 +1,12 @@
 /**
  * 
  */
-package Codility;
+package Codility.Lesson1_Iterations;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author kyungstone
@@ -44,16 +45,17 @@ import java.util.List;
  * disclosure prohibited.
  */
 
-public class Lesson1_Iterations {
+public class BinaryGap {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int N = 1587;
-		Lesson1_Iterations lesson = new Lesson1_Iterations();
-		System.out.println("Result : " + lesson.solution(N));
+		int N = 1041;
+		BinaryGap binaryGap = new BinaryGap();
+		//System.out.println("Result : " + binaryGap.solution(N));
+		System.out.println("Result : " + binaryGap.solution2(N));
 	}
 	
 	public int solution(int N) {
@@ -70,6 +72,32 @@ public class Lesson1_Iterations {
 		int tempSize = 0;
 		for(int i:binaryList) {
 			if(i==1) {
+				if(tempSize > zeroSize) {
+					zeroSize = tempSize;
+				}
+				tempSize = 0;
+			} else {
+				tempSize++;
+			}
+		}
+		
+		return zeroSize;
+    }
+	
+	public int solution2(int N) {
+        // write your code in Java SE 8
+		int zeroSize = 0;
+		Stack<Integer> binaryStack = new Stack<Integer>();
+		while(N!=1) {
+			binaryStack.add(N%2);
+			N = (int) Math.floor(N/2);
+		}
+		binaryStack.add(N);
+		
+		int tempSize = 0;
+		while(!binaryStack.isEmpty()) {
+			int binary = binaryStack.pop();
+			if(binary==1) {
 				if(tempSize > zeroSize) {
 					zeroSize = tempSize;
 				}
