@@ -1,7 +1,7 @@
 /**
  * 
  */
-package exercise;
+package exercise.one;
 
 /**
  * @author kyungstone
