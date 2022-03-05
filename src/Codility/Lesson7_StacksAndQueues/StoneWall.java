@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Codility.Lesson7.StacksAndQueues;
+package Codility.Lesson7_StacksAndQueues;
 
 import java.util.ArrayList;
 import java.util.HashSet;
