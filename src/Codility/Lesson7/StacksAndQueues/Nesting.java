@@ -3,6 +3,8 @@
  */
 package Codility.Lesson7.StacksAndQueues;
 
+import java.util.Stack;
+
 /**
  * @author kyungstone
  *
@@ -39,8 +41,20 @@ public class Nesting {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//String S = "(()(())())";
-		String S = "())";
-		System.out.println(Nesting.solution(S));
+		//String S = "())";
+		//System.out.println(Nesting.solution(S));
+		//System.out.println('A' + 0); // 65, 66, 67, 68, 69
+		//System.out.println('B' + 0); // 66
+		Stack<Character> s = new Stack<Character>();
+		s.add('A');
+		s.add('B');
+		s.add('C');
+		String ss = "";
+		while(!s.isEmpty()) {
+			ss += s.pop();
+		}
+		System.out.println(new StringBuffer(ss).reverse().toString()); // 66
+		
 	}
 	
 	/*
