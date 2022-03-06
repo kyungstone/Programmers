@@ -32,7 +32,7 @@ import java.util.Map;
  * http://hsin.hr/coci/archive/2014_2015/contest2_tasks.pdf
  * https://programmers.co.kr/learn/courses/30/lessons/42576/solution_groups?language=java&type=all
  */
-public class NotCompletionPlayer {
+public class UnfinishedPlayer {
 
 	/**
 	 * @param args
@@ -48,7 +48,7 @@ public class NotCompletionPlayer {
 		String[] participant = {"mislav", "stanko", "mislav", "ana"};
 		String[] completion = {"stanko", "ana", "mislav"};
 		
-		System.out.println(NotCompletionPlayer.solution(participant, completion));
+		System.out.println(UnfinishedPlayer.solution(participant, completion));
 	}
 	
 	public static String solution(String[] participant, String[] completion) {
