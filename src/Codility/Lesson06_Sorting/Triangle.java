@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Codility.Lesson6_Sorting;
+package Codility.Lesson06_Sorting;
 
 import java.util.Arrays;
 
